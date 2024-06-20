@@ -75,11 +75,13 @@
                 grid-template-columns: repeat(4, 1fr);
                 grid-gap: 20px;
                 margin: 20px;
+                background-color: #6A0DAD;
             }
             .news-item {
                 border: 1px solid #ddd;
                 padding: 10px;
                 text-align: center;
+                background-color: white;
             }
             .news-item img {
                 max-width: 100%;
@@ -106,7 +108,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Panel ID="Panel1" runat="server" BackColor=" #6a0dad" Height="1400px" Width="1571px">
+            <asp:Panel ID="Panel1" runat="server" BackColor=" #6a0dad" Height="1447px" Width="1571px">
                 <asp:Panel ID="Panel2" runat="server" BackColor="#AD88C6" Height="86px">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <br />
@@ -128,11 +130,11 @@
                 <br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton5" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://falyolu.com/wp-content/uploads/2023/07/srcnx_coffee_horoscope_coffee_cup_no_shadow_white_background_tu_12af7150-2f58-44b4-91cc-c8e4f3134dbd.png.webp" OnClick="ImageButton5_Click" Width="259px" />
+                <asp:ImageButton ID="ImageButton5" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://falyolu.com/images/logofalyolu.png" OnClick="ImageButton5_Click" Width="259px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton6" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://falyolu.com/wp-content/uploads/2023/07/tarot-fali.jpg.webp" OnClick="ImageButton6_Click" Width="259px" />
+                <asp:ImageButton ID="ImageButton6" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://regincollective.com/image/cache/catalog/urunler/78d95c4c-2ce9-4a21-9ed4-b91426ca6824-800x800.jpg" OnClick="ImageButton6_Click" Width="259px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton7" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://falyolu.com/wp-content/uploads/2023/07/el-fali.png.webp" OnClick="ImageButton7_Click" Width="259px" />
+                <asp:ImageButton ID="ImageButton7" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yiwoGmberWSiXmk3IljUCsg2-lIXOb9qrA&amp;s" OnClick="ImageButton7_Click" Width="259px" />
                 <br />
                 <br />
                 <br />
@@ -142,9 +144,9 @@
                 <br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton8" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://falyolu.com/wp-content/uploads/2023/07/ruya-yorumu.png.webp" OnClick="ImageButton8_Click" Width="259px" />
+                <asp:ImageButton ID="ImageButton8" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdzWX34TvxPw_1LTwi-7iy6TuWmsNJHMsNOw&amp;s" OnClick="ImageButton8_Click" Width="259px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton9" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://falyolu.com/wp-content/uploads/2023/07/katina-ask-fali.png.webp" OnClick="ImageButton9_Click" Width="259px" />
+                <asp:ImageButton ID="ImageButton9" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://m.media-amazon.com/images/I/41YIXsr07QL._AC_UF1000,1000_QL80_.jpg" OnClick="ImageButton9_Click" Width="259px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />
                 <br />
                 <br />
@@ -157,12 +159,6 @@
                                 <img src="<%# Eval("ImageUrl") %>" alt="News Image" />
                                 <div class="news-title"><%# Eval("Title") %></div>
                                 <div class="news-description"><%# Eval("Description") %></div>
-                                <div class="news-meta">
-                                    <span>Category: <%# Eval("Category") %></span><br />
-                                    <span>Author: <%# Eval("Author") %></span><br />
-                                    <span>Published: <%# Eval("PubDate") %></span>
-                                </div>
-                                <asp:Button ID="btnViewDetails" runat="server" Text="View Details" CommandArgument='<%# Eval("NewsID") %>' />
                                 <asp:HyperLink runat="server" NavigateUrl='<%# Eval("Link") %>' Text="Read more" Target="_blank" />
                             </div>
                         </ItemTemplate>

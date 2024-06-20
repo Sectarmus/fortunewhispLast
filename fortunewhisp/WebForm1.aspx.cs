@@ -40,13 +40,10 @@ namespace fortunewhisp
 
                 string title = node.SelectSingleNode("title").InnerText;
                 string description = node.SelectSingleNode("description").InnerText;
-                string category = node.SelectSingleNode("category")?.InnerText ?? "Uncategorized";
-                string author = node.SelectSingleNode("author")?.InnerText ?? "Unknown";
-                string pubDate = node.SelectSingleNode("pubDate").InnerText;
                 string imageUrl = node.SelectSingleNode("enclosure")?.Attributes["url"]?.Value ?? "No Image";
                 string link = node.SelectSingleNode("link").InnerText;
 
-                News news = new News(newsList.Count + 1, title, description, category, author, pubDate, imageUrl, link);
+                News news = new News(newsList.Count + 1, title, description, imageUrl, link);
                 newsList.Add(news);
 
                 currentCount++;

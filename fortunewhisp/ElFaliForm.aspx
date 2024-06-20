@@ -7,7 +7,7 @@
     <title>El Falı Formu</title>
     <script>
         function previewImage() {
-            var fileInput = document.getElementById('fileInput');
+            var fileInput = document.getElementById('fileUpload');
             var preview = document.getElementById('preview');
             var file = fileInput.files[0];
             var reader = new FileReader();
@@ -27,7 +27,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #6a0dad; /* Mor arka plan rengi */
+            background-color: #6a0dad;
             margin: 0;
             padding: 0;
         }
@@ -88,8 +88,19 @@
             width: 100px;
             height: auto;
         }
-</style>
 
+        #preview {
+            display: none;
+            max-width: 300px;
+            margin-top: 10px;
+        }
+
+        #TextBoxComments {
+            width: 100%;
+            height: 200px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -97,20 +108,16 @@
             <div>
                 <h2>El Falı Formu</h2>
                 <!-- Fotoğraf seçme alanı -->
-                <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yiwoGmberWSiXmk3IljUCsg2-lIXOb9qrA&s" alt="Fal fincanı" style="display: block; margin: 0 auto; width: 100px; height: auto;" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yiwoGmberWSiXmk3IljUCsg2-lIXOb9qrA&s" alt="Fal fincanı" style="display: block; margin: 0 auto; width: 100px; height: auto;" />
                 <asp:FileUpload ID="fileUpload" runat="server" onchange="previewImage()" accept="image/*" />
                 <!-- Önizleme için bir resim alanı -->
-                <img id="preview" src="#" alt="Seçilen Fotoğraf" style="display: none; max-width: 300px; margin-top: 10px;" />
+                <img id="preview" src="#" alt="Seçilen Fotoğraf" />
                 <!-- Yorum yapılacak metin kutusu -->
-                <textarea id="commentBox" runat="server" ClientIDMode="Static" placeholder="Yorumunuzu buraya yazınız..." style="width: 100%; height: 100px; margin-top: 10px;"></textarea>
-                <!-- Gönder butonu -->
-                <asp:Button ID="ButtonSubmit" runat="server" Text="Gönder" OnClick="ButtonSubmit_Click" Style="margin-top: 10px;" />
+                &nbsp;<!-- Gönder butonu --><asp:Button ID="ButtonSubmit" runat="server" Text="Gönder" OnClick="ButtonSubmit_Click" Style="margin-top: 10px;" />
                 <!-- Yorumları görüntülemek için TextBox -->
-                <asp:TextBox ID="TextBoxComments" runat="server" TextMode="MultiLine" ReadOnly="true" Style="width: 100%; height: 200px; margin-top: 10px;"></asp:TextBox>
+                <asp:TextBox ID="TextBoxComments" runat="server" TextMode="MultiLine" ReadOnly="true"></asp:TextBox>
             </div>
         </div>
     </form>
 </body>
 </html>
-
-

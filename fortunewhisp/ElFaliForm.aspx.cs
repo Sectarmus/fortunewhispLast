@@ -1,10 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Xml;
 
 namespace fortunewhisp
 {
@@ -17,23 +14,52 @@ namespace fortunewhisp
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
-            if (fileUpload.HasFile) // Dosya seçilmiş mi kontrol ediyoruz
+            if (fileUpload.HasFile)
             {
                 // Yüklenen fotoğrafın yolu
                 string fileName = Path.GetFileName(fileUpload.PostedFile.FileName);
                 string imagePath = "~/UploadedImages/" + fileName;
 
-                // Yüklenen fotoğrafı sunucuya kaydet
-                fileUpload.SaveAs(Server.MapPath(imagePath));
+                // XML dosyasından rastgele fal yorumunu yükle
+                string falYorumu = GetRandomFalYorumu(Server.MapPath("~/Fallar.xml"));
 
-                // Yorum
-                string comment = commentBox.Value;
+                // Yorumları TextBox'a ekle
+                TextBoxComments.Text = $"Fal Yorumunuz: {falYorumu}";
+            }
+            else
+            {
+                // Fotoğraf yüklenmemişse uyarı mesajı göster
+                TextBoxComments.Text = "Lütfen bir fotoğraf yükleyin.";
+            }
+        }
 
-                // Yapılan yorumu TextBox'a ekle
-                TextBoxComments.Text += "Yorum: " + comment + Environment.NewLine;
-                // Yüklenen fotoğrafı ekle
-                TextBoxComments.Text += "Fotoğraf: " + imagePath + Environment.NewLine;
-                TextBoxComments.Text += "----------------------------------------------" + Environment.NewLine;
+        private string GetRandomFalYorumu(string xmlFilePath)
+        {
+            List<string> yorumlar = new List<string>();
+            XmlDocument doc = new XmlDocument();
+            try
+            {
+                doc.Load(xmlFilePath);
+                XmlNodeList nodes = doc.SelectNodes("/Fallar/Fal/Yorum");
+                foreach (XmlNode node in nodes)
+                {
+                    yorumlar.Add(node.InnerText.Trim());
+                }
+
+                if (yorumlar.Count > 0)
+                {
+                    Random rnd = new Random();
+                    int randomIndex = rnd.Next(yorumlar.Count);
+                    return yorumlar[randomIndex];
+                }
+                else
+                {
+                    return "Fal yorumları bulunamadı.";
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"Hata: {ex.Message}";
             }
         }
 

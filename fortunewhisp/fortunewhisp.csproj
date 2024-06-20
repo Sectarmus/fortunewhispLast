@@ -70,6 +70,7 @@
     <Content Include="DreamInterpretationForm.aspx" />
     <Content Include="ElFaliForm.aspx" />
     <Content Include="Fal.xml" />
+    <Content Include="Fallar.xml" />
     <Content Include="KahveFaliForm.aspx" />
     <Content Include="KatinaFaliForm.aspx" />
     <Content Include="TarotFaliForm.aspx" />
