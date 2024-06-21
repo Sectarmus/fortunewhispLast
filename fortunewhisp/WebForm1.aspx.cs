@@ -18,10 +18,29 @@ namespace fortunewhisp
                 if (Session["Username"] != null)
                 {
                     lblWelcome.Text = "Hoş geldiniz, " + Session["Username"];
-                    lblWelcome.Visible = true; // Karşılama mesajını görünür yap
+                    lblWelcome.Visible = true;
+                    btnsignin.Visible = false;
+                    btnsignup.Visible = false;
+                    btnsignout.Visible = true;
                 }
                 LoadNews();
             }
+        }
+
+        protected void btnsignin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignIn.aspx");
+        }
+
+        protected void btnsignup_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignUp.aspx");
+        }
+
+        protected void btnsignout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("WebForm1.aspx");
         }
 
         private void LoadNews()
@@ -80,16 +99,6 @@ namespace fortunewhisp
         protected void ImageButton9_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("KatinaFaliForm.aspx");
-        }
-
-        protected void btnsignin_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("SignIn.aspx");
-        }
-
-        protected void btnsignup_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("SignUp.aspx");
         }
     }
 }

@@ -114,6 +114,15 @@ namespace fortunewhisp
         protected global::System.Web.UI.WebControls.Button btnsignup;
 
         /// <summary>
+        /// btnsignout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnsignout;
+
+        /// <summary>
         /// ImageButton5 control.
         /// </summary>
         /// <remarks>

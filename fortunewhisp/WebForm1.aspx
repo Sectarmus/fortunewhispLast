@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+NZ:wght@100..400&display=swap');
             body {
                 font-family: Arial, sans-serif; /* Genel font ayarı */
                 background-color: #f0f0f0; /* Sayfa arka plan rengi */
@@ -41,7 +42,7 @@
             }
 
             .btnprime{
-                background-color: #04AA6D; /* Green */
+                background-color: #060490; /* Green */
                 border: none;
                 color: white;
                 padding: 8px 17px;
@@ -50,18 +51,38 @@
                 display: inline-block;
                 font-size: 16px;
                 transition-duration: 0.4s;
+                
             }
 
             .btnprime:hover{
                 background-color: white;
-                color: #04AA6D;
+                color: #060490;
             }
+
+            .btnsecond{
+                background-color: #060490; /* Green */
+                border: none;
+                color: white;
+                padding: 6px 13px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 13px;
+                transition-duration: 0.4s;
+            }
+
+            .btnsecond:hover{
+                background-color: white;
+                color: #060490;
+            }
+           
             .menu-button:hover {
                 background-color: #8C6D99; /* Üzerine gelindiğinde menü düğmesi arka plan rengi */
             }
 
             #Label1 {
                 font-size: 28px; /* Başlık metin boyutu */
+                font-family: "Open Sans", sans-serif;
             }
 
             #ImageButton5, #ImageButton6, #ImageButton7, #ImageButton8, #ImageButton9 {
@@ -127,6 +148,8 @@
                 color: #555;
             }
 
+            
+
     </style>
 
 </head>
@@ -140,15 +163,16 @@
                     
                     <asp:Label ID="Label2" runat="server" Font-Bold="True" ForeColor="White" Visible="False" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnmain" runat="server" style="margin-bottom: 0px" Text="Main" />
+                    <asp:Button ID="btnmain" class="btnsecond" runat="server" style="margin-bottom: 0px" Text="Main" />
                     &nbsp;
-                    <asp:Button ID="btnabout" runat="server" Text="About" />
+                    <asp:Button ID="btnabout" class="btnsecond" runat="server" Text="About" />
                     &nbsp;&nbsp;
-                    <asp:Button ID="btncontact" runat="server" Text="Contact" />
+                    <asp:Button ID="btncontact" class="btnsecond" runat="server" Text="Contact" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" BorderColor="#FF99FF" Font-Bold="True" Font-Italic="True" Font-Size="XX-Large" ForeColor="White" Height="45px" Text="FortuneWhispers" Width="264px"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnsignin" class ="btnprime" runat="server" Text="Sign In" OnClick="btnsignin_Click" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnsignup" class ="btnprime" runat="server" Text="Sign Up" OnClick="btnsignup_Click" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnsignin" class ="btnprime" runat="server" Text="Sign In" OnClick="btnsignin_Click" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnsignup" class ="btnprime" runat="server" Text="Sign Up" OnClick="btnsignup_Click" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="btnsignout" class ="btnprime" runat="server" Text="Sign Out" OnClick="btnsignout_Click" Visible="False" />
                 </asp:Panel>
                 <br />
                 <br />
