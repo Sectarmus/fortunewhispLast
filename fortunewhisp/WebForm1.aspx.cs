@@ -15,9 +15,13 @@ namespace fortunewhisp
         {
             if (!IsPostBack)
             {
+                if (Session["Username"] != null)
+                {
+                    lblWelcome.Text = "Hoş geldiniz, " + Session["Username"];
+                    lblWelcome.Visible = true; // Karşılama mesajını görünür yap
+                }
                 LoadNews();
             }
-
         }
 
         private void LoadNews()
@@ -78,5 +82,14 @@ namespace fortunewhisp
             Response.Redirect("KatinaFaliForm.aspx");
         }
 
+        protected void btnsignin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignIn.aspx");
+        }
+
+        protected void btnsignup_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SignUp.aspx");
+        }
     }
 }

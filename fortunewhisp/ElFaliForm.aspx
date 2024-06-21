@@ -113,7 +113,8 @@
                 <!-- Önizleme için bir resim alanı -->
                 <img id="preview" src="#" alt="Seçilen Fotoğraf" />
                 <!-- Yorum yapılacak metin kutusu -->
-                &nbsp;<!-- Gönder butonu --><asp:Button ID="ButtonSubmit" runat="server" Text="Gönder" OnClick="ButtonSubmit_Click" Style="margin-top: 10px;" />
+                <br />
+                <!-- Gönder butonu --><asp:Button ID="ButtonSubmit" runat="server" Text="Gönder" OnClick="ButtonSubmit_Click" Style="margin-top: 10px;" />
                 <!-- Yorumları görüntülemek için TextBox -->
                 <asp:TextBox ID="TextBoxComments" runat="server" TextMode="MultiLine" ReadOnly="true"></asp:TextBox>
             </div>

@@ -73,7 +73,10 @@
     <Content Include="Fallar.xml" />
     <Content Include="KahveFaliForm.aspx" />
     <Content Include="KatinaFaliForm.aspx" />
+    <Content Include="SignIn.aspx" />
+    <Content Include="SignUp.aspx" />
     <Content Include="TarotFaliForm.aspx" />
+    <Content Include="Users.xml" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -108,6 +111,20 @@
     </Compile>
     <Compile Include="News.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TarotFaliForm.aspx.cs">
       <DependentUpon>TarotFaliForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
