@@ -7,12 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace fortunewhisp
 {
-    public partial class DreamInterpretationForm : System.Web.UI.Page
+    public partial class DreamInterpretationForm : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GenerateAlphabetButtons();
-
+            if (!IsPostBack)
+            {
+                GenerateAlphabetButtons();
+            }
         }
 
         private void GenerateAlphabetButtons()
@@ -39,7 +41,10 @@ namespace fortunewhisp
         protected void SearchButton_Click(object sender, EventArgs e)
         {
             string query = searchTextBox.Text;
-            Response.Redirect($"https://www.milliyet.com.tr/pembenar/ruya-tabirleri/?search={query}");
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                Response.Redirect($"https://www.milliyet.com.tr/pembenar/ruya-tabirleri/?search={HttpUtility.UrlEncode(query)}");
+            }
         }
     }
 }

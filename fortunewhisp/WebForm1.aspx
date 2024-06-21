@@ -8,11 +8,16 @@
     <title></title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+NZ:wght@100..400&display=swap');
-            body {
-                font-family: Arial, sans-serif; /* Genel font ayarı */
-                background-color: #f0f0f0; /* Sayfa arka plan rengi */
-                margin: 0; /* Sayfa kenar boşlukları */
-                padding: 0; /* İçerik boşlukları */
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden; /* Yatay kaydırma çubuğunu kaldır */
+            }
+
+            * {
+                box-sizing: border-box;
             }
 
             #Panel1 {
@@ -83,11 +88,22 @@
             #Label1 {
                 font-size: 28px; /* Başlık metin boyutu */
                 font-family: "Open Sans", sans-serif;
+                background: linear-gradient(to right, #FFD700, #FFFACD);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
             }
 
             #ImageButton5, #ImageButton6, #ImageButton7, #ImageButton8, #ImageButton9 {
-                border-style: inset; /* Kenarlık stili */
+                 /* Kenarlık stili */
                 transition: transform 0.3s; /* Geçiş efekti */
+                border-radius:35%;
+                border: 5px solid #FFD700;
+                box-shadow:5px 5px;
+                
+            }
+            #ImageButton5, #ImageButton6, #ImageButton7{              
+                margin-bottom: -55px;
             }
 
             #ImageButton5:hover, #ImageButton6:hover, #ImageButton7:hover, #ImageButton8:hover, #ImageButton9:hover {
@@ -124,7 +140,8 @@
                 padding: 10px;
                 text-align: center;
                 background-color: white;
-                transition: all .2s ease-in-out; 
+                transition: all .2s ease-in-out;
+                margin-right:15px;
             }
             .news-item:hover{
                 transform: scale(1.05);
@@ -147,8 +164,6 @@
                 font-size: 0.8em;
                 color: #555;
             }
-
-            
 
     </style>
 
@@ -181,11 +196,11 @@
                 <br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton5" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://falyolu.com/images/logofalyolu.png" OnClick="ImageButton5_Click" Width="259px" />
+                <asp:ImageButton ID="ImageButton5" runat="server" BorderStyle="Inset" Height="220px" ImageUrl="https://falyolu.com/images/logofalyolu.png" OnClick="ImageButton5_Click" Width="300px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton6" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://regincollective.com/image/cache/catalog/urunler/78d95c4c-2ce9-4a21-9ed4-b91426ca6824-800x800.jpg" OnClick="ImageButton6_Click" Width="259px" />
+                <asp:ImageButton ID="ImageButton6" runat="server" BorderStyle="Inset" Height="220px" ImageUrl="https://regincollective.com/image/cache/catalog/urunler/78d95c4c-2ce9-4a21-9ed4-b91426ca6824-800x800.jpg" OnClick="ImageButton6_Click" Width="300px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton7" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yiwoGmberWSiXmk3IljUCsg2-lIXOb9qrA&amp;s" OnClick="ImageButton7_Click" Width="259px" />
+                <asp:ImageButton ID="ImageButton7" runat="server" BorderStyle="Inset" Height="220px" ImageUrl="https://fa-blog.b-cdn.net/wp-content/uploads/2023/02/el-fali-nedir-kendi-elinizi-okumak-icin-bir-rehber.jpg" OnClick="ImageButton7_Click" Width="300px" />
                 <br />
                 <br />
                 <br />
@@ -195,9 +210,9 @@
                 <br />
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton8" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdzWX34TvxPw_1LTwi-7iy6TuWmsNJHMsNOw&amp;s" OnClick="ImageButton8_Click" Width="259px" />
+                <asp:ImageButton ID="ImageButton8" runat="server" BorderStyle="Inset" Height="220px" ImageUrl="https://static.vecteezy.com/system/resources/previews/024/553/569/non_2x/dreamcatcher-boho-style-magic-ritual-dreams-dreamcatcher-decorated-astrology-spirituality-magic-symbol-ethnic-tribal-element-ai-generated-png.png" OnClick="ImageButton8_Click" Width="300px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton9" runat="server" BorderStyle="Inset" Height="191px" ImageUrl="https://m.media-amazon.com/images/I/41YIXsr07QL._AC_UF1000,1000_QL80_.jpg" OnClick="ImageButton9_Click" Width="259px" />
+                <asp:ImageButton ID="ImageButton9" runat="server" BorderStyle="Inset" Height="220px" ImageUrl="https://cdn.britannica.com/72/223172-131-C3F72804/astrology-horoscope-circle.jpg" OnClick="ImageButton9_Click" Width="300px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<br />
                 <br />
                 <br />
