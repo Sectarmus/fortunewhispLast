@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DreamInterpretationForm.aspx.cs" Inherits="fortunewhisp.DreamInterpretationForm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DreamInterpretationForm.aspx.cs" Inherits="fortunewh12.DreamInterpretationForm" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -76,21 +76,6 @@
             border-radius: 4px;
             margin-top: 20px;
         }
-        .btnsearch{
-            background-color: #060490; /* Green */
-            border: none;
-            color: white;
-            padding: 8px 17px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            transition-duration: 0.4s;
-        }
-        .btnsearch:hover{
-            background-color: #d8e604;
-            color: black;
-        }
     </style>
 </head>
 <body>
@@ -100,7 +85,7 @@
             <h2>Rüya Tabiri</h2>
             <div class="search-box">
                 <asp:TextBox ID="searchTextBox" runat="server" placeholder="Rüya tabiri ara..."></asp:TextBox>
-                <asp:Button ID="searchButton" class="btnsearch" runat="server" Text="Ara" OnClick="SearchButton_Click" />
+                <asp:Button ID="searchButton" runat="server" Text="Ara" OnClick="SearchButton_Click" />
             </div>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
@@ -109,10 +94,6 @@
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>
-        <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Image ID="Image1" runat="server" Height="382px" ImageUrl="https://images.ctfassets.net/cnu0m8re1exe/52MFJVkqEMCiNdAVqYBHZ/7b26a05b4a8cddf7a9f70d5f168f90de/shutterstock_1520037971.jpg?fm=jpg&amp;fl=progressive&amp;w=660&amp;h=433&amp;fit=fill" Width="560px" />
-        </p>
     </form>
 </body>
 </html>

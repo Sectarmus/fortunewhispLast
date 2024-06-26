@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace fortunewhisp
+namespace fortunewh12
 {
     public partial class DreamInterpretationForm : Page
     {
@@ -41,10 +38,7 @@ namespace fortunewhisp
         protected void SearchButton_Click(object sender, EventArgs e)
         {
             string query = searchTextBox.Text;
-            if (!string.IsNullOrWhiteSpace(query))
-            {
-                Response.Redirect($"https://www.milliyet.com.tr/pembenar/ruya-tabirleri/?search={HttpUtility.UrlEncode(query)}");
-            }
+            Response.Redirect($"https://www.milliyet.com.tr/pembenar/ruya-tabirleri/?search={query}");
         }
     }
 }
